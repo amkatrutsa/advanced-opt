@@ -12,3 +12,7 @@ Presentations of the advanced topics in optimization
 7. Riemanien optimization
 8. Submodular optimization
 
+## Useful links
+
+- [Convex optimization cheatsheet](https://github.com/amkatrutsa/convex_opt/blob/master/notes.pdf), not perfect, but still
+
