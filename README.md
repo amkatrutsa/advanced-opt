@@ -3,7 +3,7 @@ Presentations of the advanced topics in optimization
 
 ## Syllabus
 
-1. Introduction
+1. [Introduction](./01-Intro/01-Intro.pdf)
 2. Gradient methods and their stochastic reformulations
 3. Stochastic methods to train deep neural networks
 4. Proximal methods
