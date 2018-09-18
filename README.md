@@ -4,13 +4,14 @@ Presentations of the advanced topics in optimization
 ## Syllabus
 
 1. [Introduction](./01-Intro/01-Intro.pdf)
-2. Gradient methods and their stochastic reformulations
-3. Stochastic methods to train deep neural networks
-4. Proximal methods
-5. Catalyst and acceleration techniques
-6. Universal gradient methods
-7. Riemanien optimization
-8. Submodular optimization
+2. [Gradient descent and beyond. Part 1](./02-FOM/02-FOM.pdf)
+3. Stochastic reformulations of basic gradient methods
+4. Stochastic methods to train deep neural networks
+5. Proximal methods
+6. Catalyst and acceleration techniques
+7. Universal gradient methods
+8. Riemanien optimization
+9. Submodular optimization
 
 ## Useful links
 
