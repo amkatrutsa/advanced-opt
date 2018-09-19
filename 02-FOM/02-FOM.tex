@@ -10,6 +10,7 @@
 \usepackage[T2A]{fontenc}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{tikz}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor=,urlcolor=blue}
@@ -119,7 +120,7 @@ The best parameter you select gives you very gain in convergence!
 
 \end{frame}
 
-\begin{frame}{Convergence: any smooth function}
+\begin{frame}{Convergence: any $L$-smooth function}
 \begin{equation*}
 \begin{split}
 f(x_{k+1}) &\leq f(x_k) + \langle f'(x_k), x_{k+1} - x_k \rangle + \frac{L}{2}\|x_{k+1} - x_k\|_2^2 = \\
@@ -136,7 +137,7 @@ f(x_{k+1}) &\leq f(x_k) + \langle f'(x_k), x_{k+1} - x_k \rangle + \frac{L}{2}\|
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Convergence: $L$-smooth case}
+\begin{frame}{Convergence: $L$-smooth convex case}
 \begin{block}{Theorem}
 Let $f$ be $L$-smooth convex function and $\alpha = \frac{1}{L}$, then GD converges as
 \[
@@ -260,7 +261,7 @@ where $x(\tau) = x_k + \tau(x^* - x_k) $
 
 \begin{frame}{Parameter selection}
 \begin{block}{Theorem}
-Let $f$ be $L$-smooth and $\mu$-strongly convex, $\kappa = $ Then $\alpha_k = \frac{4}{(\sqrt{L} + \sqrt{\mu})^2}$ and $\beta_k = \max(|1 - \sqrt{\alpha_k L}|, |1 - \sqrt{\alpha_k \mu}|)^2$ gives
+Let $f$ be $L$-smooth and $\mu$-strongly convex. Then $\alpha_k = \frac{4}{(\sqrt{L} + \sqrt{\mu})^2}$ and $\beta_k = \max(|1 - \sqrt{\alpha_k L}|, |1 - \sqrt{\alpha_k \mu}|)^2$ gives
 \begin{equation*}
 \left \|
 \begin{bmatrix}
@@ -300,7 +301,7 @@ One of possible notation variant
 \begin{split}
 & y_0 = x_0 \\
 & x_{k+1} = y_k - \alpha_k f'(y_k)\\
-& y_{k+1} = y_k + \frac{k}{k + 3} (x_{k+1} - x_k)
+& y_{k+1} = x_{k+1} + \frac{k}{k + 3} (x_{k+1} - x_k)
 \end{split}
 \end{equation*}
 
@@ -310,6 +311,17 @@ One of possible notation variant
 \item Non-monotone, too
 \item More details and options see in Part 2
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Nesterov method visualization}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{nesterov_plot}
+\end{figure}
+
+
+
 \end{frame}
 
 \begin{frame}{Convergence: $L$-smooth convex}
@@ -336,7 +348,6 @@ f(x_k) - f^* \leq L\|x_k - x_0\|_2^2 \left(1 - \frac{1}{\sqrt{\kappa}} \right)^k
 \begin{itemize}
 \item Faster than GD
 \item Similar to heavy-ball method
-\item 
 \end{itemize}
 \end{frame}
 
@@ -372,7 +383,7 @@ Functions & Lower bound\\
 \hline
 Nonsmooth & $f(x_k) - f^* \geq \frac{G\|x^* - x_0\|_2^2}{2(1 + \sqrt{k+1})}$\\
 \hline
-$L$-smooth & $f(x_k) - f^* \geq \frac{3L \|x_0 - x^*\|_2^2}{32(k+1)^2}$\\
+$L$-smooth convex & $f(x_k) - f^* \geq \frac{3L \|x_0 - x^*\|_2^2}{32(k+1)^2}$\\
 \hline
 $\mu$-strongly convex & $f(x_k) - f^* \geq \frac{\mu}{2}\left(\frac{\sqrt{\kappa} - 1}{\sqrt{\kappa} + 1} \right)^{2k} \|x_0 - x^*\|_2^2$\\
 \hline
