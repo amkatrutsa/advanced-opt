@@ -7,7 +7,7 @@ Presentations of the advanced topics in optimization
 2. [Gradient descent and beyond. Part 1](./02-FOM/02-FOM.pdf)
 3. [Stochastic approximation and sample average approximation](./03-SA/Lecture_SA_vs_SAA_.pdf)
 4. [Proximal methods](./04-Prox/prox.ipynb)
-5. [Mirror descent]()
+5. [Mirror descent](./05-MD/05-MD.pdf)
 6. Stochastic methods to train deep neural networks
 7. Catalyst and acceleration techniques
 8. Universal gradient methods
